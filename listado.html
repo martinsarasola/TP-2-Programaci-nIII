@@ -1,11 +1,28 @@
-<label for="filtro-categoria">Filtrar por categoría:</label>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/estilos.css"></link>
+  </head>
+  <body>
+    <header>
+        <h1>Listado:</h1>
+    </header>
 
-<select id="filtro-categoria">
-  <option value="todos">Todos</option>
-  <option value="comida">Comida</option>
-  <option value="bebida">Bebida</option>
-</select>
+    <div class="contenedor-label">
+        <label for="filtro-categoria" class="listadolabel">Filtrar por categoría:</label>
 
-<section id="contenedor-listado"></section>
+    <select id="filtro-categoria">
+      <option value="todos">Todos</option>
+      <option value="comida">Comida</option>
+      <option value="bebida">Bebida</option>
+    </select>
+    </div>
 
-<script src="js/listado.js"></script>
+    <section id="contenedor-listado"></section>
+
+    <script src="js/listado.js"></script>
+    <!doctype html>
+  </body>
+</html>
