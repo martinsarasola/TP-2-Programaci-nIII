@@ -1,28 +1,15 @@
 const productos = [
-  {
-    nombre: "Hamburguesa clásica",
-    categoria: "comida",
-    precio: 8000,
-  },
-  {
-    nombre: "Papas fritas",
-    categoria: "comida",
-    precio: 4500,
-  },
-  {
-    nombre: "Limonada",
-    categoria: "bebida",
-    precio: 3000,
-  },
-  {
-    nombre: "Café",
-    categoria: "bebida",
-    precio: 2500,
-  },
+  { nombre: "Hamburguesa clásica", categoria: "comida", precio: 8000 },
+  { nombre: "Papas fritas", categoria: "comida", precio: 4500 },
+  { nombre: "Sandwich de jamón", categoria: "comida", precio: 6000 },
+  { nombre: "Limonada", categoria: "bebida", precio: 3000 },
+  { nombre: "Café", categoria: "bebida", precio: 2500 },
+  { nombre: "Jugo natural", categoria: "bebida", precio: 3500 },
 ];
 
 const contenedor = document.querySelector("#contenedor-listado");
-const filtroCategoria = document.querySelector("#filtro-categoria");
+const btnTodos = document.querySelector("#btn-todos");
+const btnComida = document.querySelector("#btn-comida");
 
 function mostrarProductos(lista) {
   contenedor.innerHTML = "";
@@ -41,18 +28,15 @@ function mostrarProductos(lista) {
   });
 }
 
-filtroCategoria.addEventListener("change", () => {
-  const categoriaSeleccionada = filtroCategoria.value;
+btnTodos.addEventListener("click", () => {
+  mostrarProductos(productos);
+});
 
-  if (categoriaSeleccionada === "todos") {
-    mostrarProductos(productos);
-  } else {
-    const productosFiltrados = productos.filter((producto) => {
-      return producto.categoria === categoriaSeleccionada;
-    });
-
-    mostrarProductos(productosFiltrados);
-  }
+btnComida.addEventListener("click", () => {
+  const productosFiltrados = productos.filter((producto) => {
+    return producto.categoria === "comida";
+  });
+  mostrarProductos(productosFiltrados);
 });
 
 mostrarProductos(productos);

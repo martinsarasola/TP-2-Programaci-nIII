@@ -4,79 +4,93 @@
 
 body {
   margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #222;
-}
-
-header {
-  padding: 2px;
-  background-color: #222;
-  color: white;
-  text-align: center;
 }
 
 nav {
   background-color: #333;
-  padding: 12px;
+  padding: 10px;
 }
 
 nav ul {
   list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 16px;
   padding: 0;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   padding: 8px 12px;
-  border-radius: 6px;
 }
 
-nav a:hover {
-  background-color: #555;
+header {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
 }
 
 main {
-  max-width: 1000px;
-  margin: 24px auto;
-  padding: 24px;
-  background-color: white;
-  border-radius: 12px;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
 }
 
 .tarjeta {
-  margin: 16px 0;
-  padding: 16px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background-color: #fafafa;
+  border: 2px solid #ccc;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.tarjeta-destacada {
+  border: 2px solid #ccc;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.tarjeta-destacada.activa {
+  border: 2px solid #ff6b6b;
+  background-color: #ffe6e6;
 }
 
 button {
-  padding: 10px 14px;
-  border: none;
-  border-radius: 8px;
+  padding: 10px 15px;
+  margin: 5px;
+  border: 1px solid #999;
+  background-color: #ddd;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 button:hover {
-  opacity: 0.85;
+  background-color: #bbb;
 }
 
-.contenedor-label {
-  display: flex;
-  align-items: center;
+.contenedor-botones {
+  margin: 20px 0;
 }
 
-.listadolabel {
+#contador-seleccionadas {
+  margin: 15px 0;
   padding: 10px;
+  border-left: 4px solid #333;
+  font-weight: bold;
 }
 
-.tarjeta {
-  margin: 10px;
+#cantidad-meriendas {
+  margin: 10px 0;
+  font-weight: bold;
 }
